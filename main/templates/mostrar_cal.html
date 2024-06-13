@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificaciones</title>
+</head>
+<body>
+    <h1>Calificaciones</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ID Alumno</th>
+                <th>ID Profesor</th>
+                <th>ID Materia</th>
+                <th>Calificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for calificacion in calificaciones %}
+            <tr>
+                <td>{{ calificacion.id }}</td>
+                <td>{{ calificacion.id_alumno }}</td>
+                <td>{{ calificacion.id_profesor }}</td>
+                <td>{{ calificacion.id_materia }}</td>
+                <td>{{ calificacion.cal }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
